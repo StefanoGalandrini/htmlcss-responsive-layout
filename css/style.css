@@ -8,6 +8,7 @@
 
 html {
     font-family: 'Ubuntu', sans-serif;
+    scroll-behavior: smooth;
     --dark-text-clr: #181818;
     --main-color-blue: #0084FD;
     --color-blue-hover: #0f5597;
@@ -31,6 +32,7 @@ ul {
 
 a {
     text-decoration: none;
+    font-size: 1rem;
 }
 
 header {
@@ -68,19 +70,20 @@ nav .menu-container .menu-item {
 
 nav .menu-container .menu-item .menu-link {
     height: 100%;
-    display: flex;
-    align-items: center;
     color: white;
     white-space: nowrap;
+    display: flex;
+    align-items: center;
 }
 
-nav button {
+nav .menu-container .menu-item .menu-link button {
+    font-size: 0.9rem;
+    height: 50%;
     color: var(--dark-text-clr);
     background-color: white;
     border-radius: 100px;
     padding: 0.3rem 1rem;
-    margin: 1.5rem 0 1rem 1rem;
-    font-size: inherit;
+    margin: 1.5rem 0;
     cursor: pointer;
     transition: all 300ms;
     white-space: nowrap;
@@ -90,7 +93,7 @@ nav .menu-container .menu-item:hover {
     background-color: var(--color-blue-hover);
 }
 
-nav button:hover {
+nav .menu-container .menu-item button:hover {
     background-color: var(--dark-text-clr);
     color: white;
 }
@@ -501,26 +504,66 @@ SECTION 5 - ABOUT US
 }
 
 
+/*
+SECTION 6 - GET STARTED
+*/
 
-
-
-
-/* 
-
-#about-us .about-card {
-display: flex;
-flex-direction: column;
+#get-started {
+    padding: 5rem 0;
+    background-color: var(--color-purple);
+    text-align: center;
+    color: white;
 }
 
-#about-us .about-card {
-display: flex;
-flex-direction: column;
+#get-started .container {
+    max-width: 600px;
+    margin-inline: auto;
 }
 
-#about-us .about-card {
-display: flex;
-flex-direction: column;
+#get-started .title {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
 }
 
- */
+#get-started h3 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+#get-started h2 {
+    font-size: 4rem;
+    color: #FDC15F;
+    margin-bottom: 3rem;
+}
+
+#get-started p {
+    max-width: 500px;
+    margin-inline: auto;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+#get-started button {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-purple);
+    background-color: white;
+    padding: 1em 2.5em;
+    border-radius: 100px;
+    margin-bottom: 2rem;
+}
+
+#get-started .copyright {
+    font-size: 1rem;
+}
+
+#get-started .copyright .privacy {
+    font-size: 1rem;
+    color: white;
+    text-decoration: underline;
+}
+
+
 
