@@ -567,3 +567,24 @@ SECTION 6 - GET STARTED
 
 
 
+
+/*
+7 - FOOTER
+*/
+
+footer {
+    background-color: var(--dark-text-clr);
+    padding: 3rem 0;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+footer .container {
+    max-width: 500px;
+    margin-inline: auto;
+}
+footer p {
+    margin-bottom: 4rem;
+}
