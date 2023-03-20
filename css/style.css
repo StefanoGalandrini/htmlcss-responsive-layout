@@ -8,7 +8,14 @@
 
 html {
     font-family: 'Ubuntu', sans-serif;
-    --dark-text-clr: #181818
+    --dark-text-clr: #181818;
+    --main-color-blue: #0084FD;
+    --color-blue-hover: #0f5597;
+    --desktop-max-width: 1140px;
+    --tablet-max-width: 768px;
+    --mobile-max-width: 500px;
+    --card-gap: 1.5rem;
+    --card-bkg-color: #b5ddff;
 
 }
 
@@ -27,12 +34,13 @@ a {
 
 header {
     height: 80px;
-    background-color: #0084FD;
+    background-color: var(--main-color-blue);
+    position: relative;
 }
 
 nav {
     height: 100%;
-    max-width: 1140px;
+    max-width: var(--desktop-max-width);
     margin-inline: auto;
     display: flex;
     justify-content: space-between;
@@ -54,7 +62,7 @@ nav .menu-container .menu-item {
     height: 100%;
     cursor: pointer;
     padding: 0 2rem;
-    
+    transition: all 300ms;
 }
 
 nav .menu-container .menu-item .menu-link {
@@ -62,6 +70,7 @@ nav .menu-container .menu-item .menu-link {
     display: flex;
     align-items: center;
     color: white;
+    white-space: nowrap;
 }
 
 nav button {
@@ -69,7 +78,125 @@ nav button {
     background-color: white;
     border-radius: 100px;
     padding: 0.3rem 1rem;
-    margin: 1.2rem 0;
+    margin: 1.2rem 0 1.2rem 1rem;
     font-size: inherit;
     cursor: pointer;
+    transition: all 300ms;
+    white-space: nowrap;
 }   
+
+nav .menu-container .menu-item:hover {
+    background-color: var(--color-blue-hover);
+}
+
+nav button:hover {
+    background-color: var(--dark-text-clr);
+    color: white;
+}
+
+/* nav .hamburger {
+    display: block;
+    cursor: pointer;
+}
+
+nav .hamburger .hamburger-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 300ms ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+} */
+
+
+
+/*
+SECTION 1 - BLUE CARDS
+*/
+
+.blue-cards .container {
+    max-width: var(--desktop-max-width);
+    margin-inline: auto;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--card-gap);
+}
+
+.blue-cards .container .card {
+    display: flex;
+    gap: var(--card-gap);
+    background-color: var(--card-bkg-color);
+    color: var(--main-color-blue);
+    border-radius: 20px;
+    padding: 0 2rem;
+}
+
+.blue-cards .container .normal {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 0 0 calc((100% - 2 * var(--card-gap)) / 3);
+}
+
+.blue-cards .container .large {
+    flex: 0 0 calc(((100% - 2 * var(--card-gap)) / 3 * 2) + var(--card-gap));
+}
+
+.blue-cards .container .large .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.blue-cards .content .card-image {
+    flex: 0 0 40%;
+}
+
+.blue-card .card-text {
+    flex: 0 0 60%;
+}
+
+.blue-cards img {
+    width: 100%;
+    margin: 2rem 0 0;
+    padding-right: 2rem;
+}    
+
+.blue-cards h2 {
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.blue-cards p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark-text-clr);
+}
+
+.blue-cards button {
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    background-color: var(--main-color-blue);
+    padding: 0.6em 2.5em;
+    border-radius: 200px;
+}
+
+.blue-cards .card-icon {
+font-size: 4rem;
+margin-top: 1.5rem;
+}
+
