@@ -207,40 +207,40 @@ margin-top: 1.5rem;
 SECTION 2 - PLANNING
 */
 
-.planning .container {
+#planning .container {
 background-color: var(--color-purple);
 padding: 10rem 0 5rem;
 }
 
-.planning .cards {
+#planning .cards {
     max-width: 875px;
     margin-inline: auto;
     display: flex;
     gap: calc(5 * var(--card-gap));
 }
 
-.planning .card {
+#planning .card {
     flex: 0 0 50%;
 }
 
-.planning .card img {
+#planning .card img {
     width: 100%;
 }
 
-.planning .card.purple h2 {
+#planning .card.purple h2 {
     color: white;
     font-size: 2rem;
     margin-top: 8rem;
     margin-bottom: 4rem;
 }
 
-.planning .card.purple p {
+#planning .card.purple p {
     color: white;
     font-size: 1rem;
     line-height: 2rem;
 }
 
-.planning .card.white {
+#planning .card.white {
     background-color: white;
     border-radius: 50px;
     margin-top: 14rem;
@@ -248,23 +248,23 @@ padding: 10rem 0 5rem;
     padding-inline: 3rem;
 }
 
-.planning .card.white img {
+#planning .card.white img {
     width: 80%;
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
-.planning .card.white h2 {
+#planning .card.white h2 {
     margin-bottom: 1.5rem;
 }
 
-.planning .card.white p {
+#planning .card.white p {
     font-size: 1rem;
     font-style: italic;
     line-height: 2rem;
 }
 
-.planning button {
+#planning button {
     width: 3.5rem;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
@@ -272,7 +272,7 @@ padding: 10rem 0 5rem;
     margin-top: 1.5rem;
 }
 
-.planning i {
+#planning i {
     font-size: 1.5rem;
 }
 
@@ -281,36 +281,36 @@ padding: 10rem 0 5rem;
 SECTION 3 - TESTIMONIALS
 */
 
-.testimonials {
+#testimonials {
     max-width: var(--desktop-max-width);
     margin-inline: auto;
     padding: 4rem 0;
 }
 
-.testimonials .intro {
+#testimonials .intro {
     text-align: center;
 }
 
-.testimonials .intro div {
+#testimonials .intro div {
     text-transform: uppercase;
     color: var(--dark-text-clr);
     margin-bottom: 2.5rem;
 }
 
-.testimonials .intro h2 {
+#testimonials .intro h2 {
     color: var(--color-purple);
     font-size: 2rem;
     margin-bottom: 2.5rem;
 }
 
-.testimonials .intro p {
+#testimonials .intro p {
     color: var(--dark-text-clr);
     font-size: 1.2rem;
     line-height: 2rem;
     margin-bottom: 2.5rem;
 }
 
-.testimonials .card {
+#testimonials .card {
     display: flex;
     align-items: center;
     gap: 3rem;
@@ -321,7 +321,7 @@ SECTION 3 - TESTIMONIALS
     color: white;
 }
 
-.testimonials .card .photo {
+#testimonials .card .photo {
     width: 12rem;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
@@ -329,20 +329,20 @@ SECTION 3 - TESTIMONIALS
     overflow: hidden;
 }
 
-.testimonials .card .photo img{
+#testimonials .card .photo img{
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
 
-.testimonials .card p {
+#testimonials .card p {
     text-align: justify;
     font-size: 1.2rem;
     line-height: 1.75rem;
     margin-bottom: 1.5rem;
 }
 
-.testimonials .card p::before {
+#testimonials .card p::before {
     font-family: 'Times New Roman', Times, serif;
     font-size: 2.5rem;
     font-weight: bold;
@@ -350,7 +350,7 @@ SECTION 3 - TESTIMONIALS
     vertical-align: bottom;
 }
 
-.testimonials .card p::after {
+#testimonials .card p::after {
     font-family: 'Times New Roman', Times, serif;
     font-size: 2.5rem;
     font-weight: bold;
@@ -358,7 +358,7 @@ SECTION 3 - TESTIMONIALS
     vertical-align: bottom;
 }
 
-.testimonials .card .name {
+#testimonials .card .name {
     text-transform: uppercase;
     font-weight: 600;
 }
@@ -368,19 +368,19 @@ SECTION 3 - TESTIMONIALS
 SECTION 4 - BENEFITS
 */
 
-.benefits {
+#benefits {
     background-color: var(--color-purple);
     padding: 4rem 0;
 }
 
-.benefits h2 {
+#benefits h2 {
     text-align: center;
     color: white;
     font-size: 3rem;
     margin-bottom: 4rem;
 }
 
-.benefits .container {
+#benefits .container {
     max-width: var(--desktop-max-width);
     margin-inline: auto;
     display: flex;
@@ -391,30 +391,30 @@ SECTION 4 - BENEFITS
     color: var(--color-purple);
 }
 
-.benefits .card {
+#benefits .card {
     background-color: white;
     flex: 0 0 calc((100% - 2 * var(--card-gap)) / 3);
     border-radius: 20px;
     padding: 1.5rem;
 }
 
-.benefits .card .number {
+#benefits .card .number {
     font-size: 5rem;
     margin-bottom: 1rem;
 }
 
-.benefits .card .card-title {
+#benefits .card .card-title {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
 }
 
-.benefits .card p {
+#benefits .card p {
     font-size: 1rem;
     line-height: 1.8rem;
     margin-bottom: 1.5rem;
 }
 
-.benefits .card button {
+#benefits .card button {
     font-size: 0.7rem;
     font-weight: 600;
     letter-spacing: .2em;
