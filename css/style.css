@@ -329,7 +329,7 @@ SECTION 3 - TESTIMONIALS
     overflow: hidden;
 }
 
-#testimonials .card .photo img{
+#testimonials .card .photo img {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
@@ -426,4 +426,101 @@ SECTION 4 - BENEFITS
 }
 
 
+
+/*
+SECTION 5 - ABOUT US
+*/
+
+#about-us {
+    padding: 5rem 0;
+}
+
+#about-us .container {
+    max-width: var(--desktop-max-width);
+    display: flex;
+    gap: calc(4 * var(--card-gap));
+    margin-inline: auto;
+}
+
+#about-us .about-text {
+    flex: 0 0 calc(70% - 2 * var(--card-gap))
+}
+
+#about-us .about-card {
+    flex: 0 0 calc(30% - 2 * var(--card-gap))
+}
+
+#about-us .about-text h2 {
+    font-size: 4rem;
+    color: var(--color-purple);
+    margin-bottom: 2rem;
+}
+
+#about-us .about-text p {
+    font-size: 1.2rem;
+    color: var(--dark-text-clr);
+    margin-bottom: 2rem;
+    line-height: 3rem;
+}
+
+#about-us .about-card {
+    display: flex;
+    flex-direction: column;
+}
+
+#about-us .about-card .img-container {
+    width: 15rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: #9792E4;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+#about-us .about-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+#about-us .about-card h3 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: var(--color-purple);
+    margin-bottom: 2rem;
+}
+
+#about-us .about-card button {
+    width: min-content;
+    white-space: nowrap;
+    font-size: 1rem;
+    color: white;
+    background-color: var(--color-purple);
+    padding: .75em 1.5em;
+    border-radius: 50px;
+}
+
+
+
+
+
+
+/* 
+
+#about-us .about-card {
+display: flex;
+flex-direction: column;
+}
+
+#about-us .about-card {
+display: flex;
+flex-direction: column;
+}
+
+#about-us .about-card {
+display: flex;
+flex-direction: column;
+}
+
+ */
 
