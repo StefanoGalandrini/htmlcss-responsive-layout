@@ -16,6 +16,7 @@ html {
     --mobile-max-width: 500px;
     --card-gap: 1.5rem;
     --card-bkg-color: #b5ddff;
+    --color-purple: #9792E4;
 
 }
 
@@ -200,3 +201,77 @@ font-size: 4rem;
 margin-top: 1.5rem;
 }
 
+
+
+/*
+SECTION 2 - PLANNING
+*/
+
+.planning .container {
+background-color: var(--color-purple);
+padding: 10rem 0 5rem;
+}
+
+.planning .cards {
+    max-width: 875px;
+    margin-inline: auto;
+    display: flex;
+    gap: calc(5 * var(--card-gap));
+}
+
+.planning .card {
+    flex: 0 0 50%;
+}
+
+.planning .card img {
+    width: 100%;
+}
+
+.planning .card.purple h2 {
+    color: white;
+    font-size: 2rem;
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+}
+
+.planning .card.purple p {
+    color: white;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+.planning .card.white {
+    background-color: white;
+    border-radius: 50px;
+    margin-top: 14rem;
+    text-align: center;
+    padding-inline: 3rem;
+}
+
+.planning .card.white img {
+    width: 80%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.planning .card.white h2 {
+    margin-bottom: 1.5rem;
+}
+
+.planning .card.white p {
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 2rem;
+}
+
+.planning button {
+    width: 3.5rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: var(--color-purple);
+    margin-top: 1.5rem;
+}
+
+.planning i {
+    font-size: 1.5rem;
+}
