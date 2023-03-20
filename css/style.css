@@ -8,5 +8,68 @@
 
 html {
     font-family: 'Ubuntu', sans-serif;
+    --dark-text-clr: #181818
+
 }
 
+button {
+    border: none;
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    height: 80px;
+    background-color: #0084FD;
+}
+
+nav {
+    height: 100%;
+    max-width: 1140px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {
+    width: 80;
+    vertical-align: middle;
+}
+
+nav .menu-container {
+    height: 100%;
+    display: flex;
+}
+
+nav .menu-container .menu-item {
+    height: 100%;
+    cursor: pointer;
+    padding: 0 2rem;
+    
+}
+
+nav .menu-container .menu-item .menu-link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+nav button {
+    color: var(--dark-text-clr);
+    background-color: white;
+    border-radius: 100px;
+    padding: 0.3rem 1rem;
+    margin: 1.2rem 0;
+    font-size: inherit;
+    cursor: pointer;
+}   
