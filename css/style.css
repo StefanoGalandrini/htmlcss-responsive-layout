@@ -276,15 +276,15 @@ padding: 10rem 0 5rem;
     font-size: 1.5rem;
 }
 
+
 /*
 SECTION 3 - TESTIMONIALS
 */
 
-
 .testimonials {
     max-width: var(--desktop-max-width);
     margin-inline: auto;
-    padding-top: 4rem;
+    padding: 4rem 0;
 }
 
 .testimonials .intro {
@@ -362,4 +362,68 @@ SECTION 3 - TESTIMONIALS
     text-transform: uppercase;
     font-weight: 600;
 }
+
+
+/*
+SECTION 4 - BENEFITS
+*/
+
+.benefits {
+    background-color: var(--color-purple);
+    padding: 4rem 0;
+}
+
+.benefits h2 {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+.benefits .container {
+    max-width: var(--desktop-max-width);
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--card-gap);
+    color: var(--color-purple);
+}
+
+.benefits .card {
+    background-color: white;
+    flex: 0 0 calc((100% - 2 * var(--card-gap)) / 3);
+    border-radius: 20px;
+    padding: 1.5rem;
+}
+
+.benefits .card .number {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.benefits .card .card-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.benefits .card p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.benefits .card button {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: .2em;
+    margin-bottom: 1.5rem;
+    color: white;
+    background-color: var(--color-purple);
+    padding: .75rem 2.5rem;
+    border-radius: 50px;
+}
+
+
 
