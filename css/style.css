@@ -19,7 +19,6 @@ html {
     --card-bkg-color: #b5ddff;
     --color-purple: #9792E4;
     --header-height: 80px;
-
 }
 
 button {
@@ -181,48 +180,8 @@ nav .menu-container input:checked ~ .hamburger::after {
 
 nav .menu-container input:checked ~ ul.menu {
     right: 0;
-    /* box-shadow: -20px 0 40px rgba(0,0,0,0.3); */
 }
 
-
-/*
-MEDIA QUERIES FOR HEADER AND NAVBAR
-*/
-
-@media screen and (max-width: 810px) {
-    nav .menu-container .hamburger,
-    nav .menu-container .check-hamburger {
-        display: block;
-    }
-
-    nav {
-        padding-inline: 1rem;
-    }
-
-    nav .menu {
-        justify-content: flex-start;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: var(--header-height);
-        right: -15rem;
-        background-color: var(--main-color-blue);
-        width: 15rem;
-        padding-bottom: 2rem;
-    }
-
-    nav .menu .menu-item {
-        width: 100%;
-        padding: 0;
-        text-align: center;
-    }
-
-    nav .menu .menu-item a{
-        padding: 1rem 0;
-    }
-
-}
 
 
 
@@ -600,12 +559,6 @@ SECTION 5 - ABOUT US
     color: var(--color-purple);
 }
 
-/* #about-us .about-card img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-} */
-
 #about-us .about-card h3 {
     font-size: 2rem;
     line-height: 2.5rem;
@@ -708,3 +661,162 @@ footer .container {
 footer p {
     margin-bottom: 4rem;
 }
+
+
+
+/*
+MEDIA QUERY FOR TABLET WIDTH
+*/
+
+@media screen and (max-width: 810px) {
+    html {
+    --desktop-max-width: var(--tablet-max-width);
+    }
+
+
+    /* HEADER AND NAVBAR */
+    nav .menu-container .hamburger,
+    nav .menu-container .check-hamburger {
+        display: block;
+    }
+
+    nav {
+        padding-inline: 0.5rem;
+    }
+
+    nav .menu {
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: var(--header-height);
+        right: -15rem;
+        background-color: var(--main-color-blue);
+        width: 15rem;
+        padding-bottom: 2rem;
+    }
+
+    nav .menu .menu-item {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    nav .menu .menu-item a{
+        padding: 1rem 0;
+    }
+
+    /* SECTION 1 - BLUE CARDS */
+
+    .blue-cards .container {
+        max-width: calc(var(--desktop-max-width) - 5rem);
+    }
+
+    .blue-cards .container .large .content {
+        display: block;
+        padding-top: 2rem;
+    }
+
+    .blue-cards .content .card-text {
+        margin-left: 1rem;
+    }
+
+    .blue-cards img {
+        display: block;
+        min-width: 0;
+        max-width: 65%;
+        margin-top: 2rem;
+        margin-left: 1.5rem;
+    }    
+
+        /* SECTION 2 - PLANNING */
+
+    #planning .cards {
+        max-width: calc(var(--tablet-max-width) - 10rem);
+        margin-inline: auto;
+        display: block;
+    }
+
+    #planning .card img {
+        min-width: 0;
+    }
+
+    #planning .card.purple h2 {
+        color: white;
+        font-size: 3rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    #planning .card.white {
+        background-color: white;
+        border-radius: 50px;
+        margin-top: 5rem;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    #planning .card.white img {
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+        /* SECTION 3 - TESTIMONIALS */
+
+    #testimonials {
+    max-width: calc(var(--desktop-max-width) - 6rem);
+    margin-inline: auto;
+    padding: 4rem 0;
+    }
+
+
+    /*
+    SECTION 4 - BENEFITS
+    */
+
+    #benefits .container {
+        max-width: calc(var(--desktop-max-width) - 6rem);
+        margin-inline: auto;
+    }
+
+    #benefits .card {
+        flex: 0 0 calc((100% - var(--card-gap)) / 2);
+    }
+
+
+    /*
+    SECTION 5 - ABOUT US
+    */
+
+    #about-us .container {
+        max-width: calc(var(--desktop-max-width) - 12rem);
+        gap: calc(2 * var(--card-gap));
+        margin-inline: auto;
+    }
+
+    #about-us .about-text {
+        flex: 0 0 calc(60% - 2 * var(--card-gap))
+    }
+
+    #about-us .about-card {
+        flex: 0 0 calc(40% - 2 * var(--card-gap))
+    }
+
+    #about-us .about-text h2 {
+        font-size: 3rem;
+    }
+
+    #about-us .about-text p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        line-height: 2rem;
+    }
+    #about-us .about-card h3 {
+        font-size: 1.75rem;
+        line-height: 2.5rem;
+        color: var(--color-purple);
+        margin-bottom: 2rem;
+    }
+}
+
