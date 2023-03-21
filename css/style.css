@@ -346,19 +346,17 @@ SECTION 3 - TESTIMONIALS
 }
 
 #testimonials .card p::before {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Georgia, serif;
     font-size: 2.5rem;
-    font-weight: bold;
     content: open-quote;
-    vertical-align: bottom;
+    vertical-align: middle;
 }
 
 #testimonials .card p::after {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Georgia, serif;
     font-size: 2.5rem;
-    font-weight: bold;
     content: close-quote;
-    vertical-align: bottom;
+    vertical-align: middle;
 }
 
 #testimonials .card .name {
@@ -473,18 +471,29 @@ SECTION 5 - ABOUT US
 
 #about-us .about-card .img-container {
     width: 15rem;
+    height: 15rem;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    background-color: #9792E4;
-    overflow: hidden;
+    background-image: url(../img/about.jpg);
+    background-size: cover;
     margin-bottom: 2rem;
+    position: relative;
 }
 
-#about-us .about-card img {
+#about-us .quote {
+    position: absolute;
+    top: -40px;
+    right: -30px;
+    font-size: 15rem;
+    font-family: Georgia, serif;
+    color: var(--color-purple);
+}
+
+/* #about-us .about-card img {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-}
+} */
 
 #about-us .about-card h3 {
     font-size: 2rem;
