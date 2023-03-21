@@ -18,6 +18,7 @@ html {
     --card-gap: 1.5rem;
     --card-bkg-color: #b5ddff;
     --color-purple: #9792E4;
+    --header-height: 80px;
 
 }
 
@@ -40,7 +41,7 @@ a {
 }
 
 header {
-    height: 80px;
+    height: var(--header-height);
     width: 100vw;
     background-color: var(--main-color-blue);
 }
@@ -58,7 +59,7 @@ nav {
 
 .logo {
     display: block;
-    width: 80;
+    width: 80px;
     vertical-align: middle;
 }
 
@@ -67,7 +68,6 @@ nav .menu-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* padding: 0 0.5em; */
 }
 
 nav .menu {
@@ -107,13 +107,17 @@ nav .menu-container .menu-item button {
 nav .menu-container .menu-item a:hover {
     box-shadow: 0 0px 20px #ffffff inset;
     text-decoration: underline;
-    /* text-decoration: overline; */
 }
 
 nav .menu-container .menu-item button:hover {
     background-color: var(--dark-text-clr);
     color: white;
 }
+
+
+/*
+Hamburger checkbox styling
+*/
 
 nav .menu-container .hamburger {
     position: relative;
@@ -158,7 +162,7 @@ nav .menu-container .check-hamburger {
 
 nav .menu-container .hamburger,
 nav .menu-container .check-hamburger {
-    /* display: none; */
+    display: none;
 }
 
 nav .menu-container input:checked ~ .hamburger {
@@ -175,10 +179,49 @@ nav .menu-container input:checked ~ .hamburger::after {
     transform: rotate(45deg);
 }
 
-@media screen and (max-width: 768px) {
-    .hamburger {
+nav .menu-container input:checked ~ ul.menu {
+    right: 0;
+    /* box-shadow: -20px 0 40px rgba(0,0,0,0.3); */
+}
+
+
+/*
+MEDIA QUERIES FOR HEADER AND NAVBAR
+*/
+
+@media screen and (max-width: 810px) {
+    nav .menu-container .hamburger,
+    nav .menu-container .check-hamburger {
         display: block;
     }
+
+    nav {
+        padding-inline: 1rem;
+    }
+
+    nav .menu {
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: var(--header-height);
+        right: -15rem;
+        background-color: var(--main-color-blue);
+        width: 15rem;
+        padding-bottom: 2rem;
+    }
+
+    nav .menu .menu-item {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    nav .menu .menu-item a{
+        padding: 1rem 0;
+    }
+
 }
 
 
