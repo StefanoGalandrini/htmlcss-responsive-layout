@@ -93,11 +93,11 @@ nav .menu-container .menu-item a {
     transition: 300ms;
 }
 
-nav .menu-container .menu-item button {
+nav .menu-container .menu-item .menu-button {
     color: var(--dark-text-clr);
     background-color: white;
     border-radius: 100px;
-    padding: 0.5em 1em;
+    padding: 0em 1em;
     cursor: pointer;
     transition: all 300ms;
     white-space: nowrap;
@@ -108,7 +108,7 @@ nav .menu-container .menu-item a:hover {
     text-decoration: underline;
 }
 
-nav .menu-container .menu-item button:hover {
+nav .menu-container .menu-item .menu-button:hover {
     background-color: var(--dark-text-clr);
     color: white;
 }
