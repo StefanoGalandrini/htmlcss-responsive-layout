@@ -24,34 +24,40 @@ html {
 button {
     border: none;
     outline: none;
+    font-family: inherit;
+    font-size: inherit;
 }
 
 ul {
-    list-style: none;
+    list-style-type: none;
 }
 
 a {
     text-decoration: none;
     font-size: 1rem;
+    font-family: inherit;
+    font-size: inherit;
 }
 
 header {
     height: 80px;
+    width: 100vw;
     background-color: var(--main-color-blue);
-    position: relative;
 }
 
 nav {
     height: 100%;
     max-width: var(--desktop-max-width);
     margin-inline: auto;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    transition: 300ms;
 }
 
 .logo {
+    display: block;
     width: 80;
     vertical-align: middle;
 }
@@ -59,38 +65,49 @@ nav {
 nav .menu-container {
     height: 100%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0 0.5em; */
 }
 
-nav .menu-container .menu-item {
+nav .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: 500ms;
+}
+
+nav .menu .menu-item {
     height: 100%;
     cursor: pointer;
-    padding: 0 2rem;
+    padding-left: 2rem;
     transition: all 300ms;
 }
 
-nav .menu-container .menu-item .menu-link {
-    height: 100%;
+nav .menu-container .menu-item a {
+    line-height: 3;
+    padding: 2rem 0.5rem;
+    display: block;
     color: white;
     white-space: nowrap;
-    display: flex;
-    align-items: center;
+    transition: 300ms;
 }
 
-nav .menu-container .menu-item .menu-link button {
-    font-size: 0.9rem;
-    height: 50%;
+nav .menu-container .menu-item button {
     color: var(--dark-text-clr);
     background-color: white;
     border-radius: 100px;
-    padding: 0.3rem 1rem;
-    margin: 1.5rem 0;
+    padding: 0.5em 1em;
     cursor: pointer;
     transition: all 300ms;
     white-space: nowrap;
 }   
 
-nav .menu-container .menu-item:hover {
-    background-color: var(--color-blue-hover);
+nav .menu-container .menu-item a:hover {
+    box-shadow: 0 0px 20px #ffffff inset;
+    text-decoration: underline;
+    /* text-decoration: overline; */
 }
 
 nav .menu-container .menu-item button:hover {
@@ -98,25 +115,71 @@ nav .menu-container .menu-item button:hover {
     color: white;
 }
 
-/* nav .hamburger {
-    display: block;
+nav .menu-container .hamburger {
+    position: relative;
+    width: 1.8rem;
+    height: 0.16rem;
+    background-color: #ffffff;
+    border-radius: 10px;
     cursor: pointer;
+    z-index: 2;
+    transition: 300ms;
 }
 
-nav .hamburger .hamburger-bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: white;
-    transition: all 300ms ease-in-out;
+nav .menu-container .hamburger::before,
+nav .menu-container .hamburger::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 0.16rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    transition: 300ms;
+}
+
+nav .menu-container .hamburger::before {
+    top: -.7rem;
+    width: 1.8rem;
+}
+
+nav .menu-container .hamburger::after {
+    top: .7rem;
+    width: 1.8rem;
+}
+
+nav .menu-container .check-hamburger {
+    position: absolute;
+    width: 1.8rem;
+    height: 100%;
+    z-index: 3;
+    cursor: pointer;
+    opacity: 0;
+}
+
+nav .menu-container .hamburger,
+nav .menu-container .check-hamburger {
+    /* display: none; */
+}
+
+nav .menu-container input:checked ~ .hamburger {
+    background-color: transparent;
+}
+
+nav .menu-container input:checked ~ .hamburger::before {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+nav .menu-container input:checked ~ .hamburger::after {
+    top: 0;
+    transform: rotate(45deg);
 }
 
 @media screen and (max-width: 768px) {
     .hamburger {
         display: block;
     }
-} */
+}
 
 
 
@@ -149,32 +212,36 @@ SECTION 1 - BLUE CARDS
     flex-direction: column;
     align-items: center;
     text-align: center;
-    flex: 0 0 calc((100% - 2 * var(--card-gap)) / 3);
+    width: calc((100% - 2 * var(--card-gap)) / 3);
 }
 
 .blue-cards .container .large {
-    flex: 0 0 calc(((100% - 2 * var(--card-gap)) / 3 * 2) + var(--card-gap));
+    width: calc(((100% - 2 * var(--card-gap)) / 3 * 2) + var(--card-gap));
 }
 
 .blue-cards .container .large .content {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 3rem;
 }
 
-.blue-cards .content .card-image {
-    flex: 0 0 40%;
+.blue-cards .content .card-text {
+    flex: 0 0 50%;
+    align-self: center;
+    margin-left: 3rem;
 }
 
-.blue-card .card-text {
-    flex: 0 0 60%;
-}
+.blue-cards .content .card-image {
+    flex: 0 0 50%;
+    align-self: flex-end;
+}    
 
 .blue-cards img {
-    width: 100%;
-    margin: 2rem 0 0;
-    padding-right: 2rem;
+    display: block;
+    min-width: 0;
+    max-width: 65%;
+    align-self: flex-end;
+    margin-left: 1.5rem;
 }    
 
 .blue-cards h2 {
@@ -200,7 +267,7 @@ SECTION 1 - BLUE CARDS
 }
 
 .blue-cards .card-icon {
-font-size: 4rem;
+font-size: 3.5rem;
 margin-top: 1.5rem;
 }
 
@@ -330,6 +397,7 @@ SECTION 3 - TESTIMONIALS
     border-radius: 50%;
     background-color: #9792E4;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 #testimonials .card .photo img {
