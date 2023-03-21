@@ -13,8 +13,8 @@ html {
     --main-color-blue: #0084FD;
     --color-blue-hover: #0f5597;
     --desktop-max-width: 1140px;
-    --tablet-max-width: 768px;
-    --mobile-max-width: 500px;
+    --tablet-max-width: 810px;
+    --mobile-max-width: 375px;
     --card-gap: 1.5rem;
     --card-bkg-color: #b5ddff;
     --color-purple: #9792E4;
@@ -615,6 +615,7 @@ SECTION 6 - GET STARTED
     max-width: 500px;
     margin-inline: auto;
     font-size: 1rem;
+    line-height: 1.75;
     margin-bottom: 2rem;
 }
 
@@ -658,7 +659,9 @@ footer .container {
     max-width: 500px;
     margin-inline: auto;
 }
-footer p {
+footer p,
+footer a {
+    line-height: 1.5;
     margin-bottom: 4rem;
 }
 
@@ -820,3 +823,213 @@ MEDIA QUERY FOR TABLET WIDTH
     }
 }
 
+
+
+
+/*
+MEDIA QUERY FOR MOBILE WIDTH
+*/
+
+@media screen and (max-width: 375px) {
+    html {
+    --desktop-max-width: calc(var(--mobile-max-width) - 3rem);
+    }
+
+    /* SECTION 1 - BLUE CARDS */
+
+    .blue-cards .container {
+        max-width: var(--desktop-max-width);
+    }
+
+    .blue-cards .container .normal,
+    .blue-cards .container .large {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .blue-cards img {
+        display: block;
+        width: 70%;
+        margin-inline: auto;
+    }    
+
+    .blue-cards h2 {
+        font-size: 1.3rem;
+    }
+
+    .blue-cards .card-icon {
+        margin-bottom: 1.5rem;
+    }
+
+
+
+    /*
+    SECTION 2 - PLANNING
+    */
+
+    #planning .cards {
+        max-width: calc(var(--mobile-max-width) - 4rem);
+        margin-inline: auto;
+        display: block;
+    }
+
+    #planning .card img {
+        min-width: 0;
+    }
+
+    #planning .card.purple h2 {
+        color: white;
+        font-size: 3rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    #planning .card.white {
+        background-color: white;
+        border-radius: 50px;
+        margin-top: 5rem;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    #planning .card.white img {
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+
+    /*
+    SECTION 3 - TESTIMONIALS
+    */
+
+    #testimonials {
+        max-width: var(--desktop-max-width);
+        margin-inline: auto;
+    }
+
+    #testimonials .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    #testimonials .card p {
+        font-size: 1rem;
+        line-height: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #testimonials .card p::before,
+    #testimonials .card p::after {
+        font-size: 2.2rem;
+    }
+
+
+    /*
+    SECTION 4 - BENEFITS
+    */
+
+    #benefits h2 {
+        max-width: var(--desktop-max-width);
+        margin-inline: auto;
+        font-size: 2.2rem;
+    }
+
+    #benefits .container {
+        max-width: var(--desktop-max-width);
+        margin-inline: auto;
+        display: block;
+    }
+
+    #benefits .card {
+        margin-bottom: 1.5rem;
+    }
+
+
+
+    /*
+    SECTION 5 - ABOUT US
+    */
+
+    #about-us .container {
+        max-width: calc(var(--desktop-max-width) - 3rem);
+        margin-inline: auto;
+        display: block;
+    }
+
+    #about-us .about-text h2 {
+        font-size: 3rem;
+    }
+
+    #about-us .about-text p {
+        font-size: 1rem;
+        line-height: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    #about-us .about-card .img-container {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    #about-us .quote {
+        font-size: 12rem;
+    }
+
+    #about-us .about-card h3 {
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+
+    #about-us .about-card button {
+        font-size: .8rem;
+    }
+
+
+    /*
+    SECTION 6 - GET STARTED
+    */
+
+    #get-started .container {
+        max-width: calc(var(--desktop-max-width) - 1rem);
+        margin-inline: auto;
+    }
+
+    #get-started .title {
+        font-size: 1rem;
+    }
+
+    #get-started h3 {
+        font-size: 1.75rem;
+    }
+
+    #get-started h2 {
+        font-size: 3.25rem;
+    }
+
+    #get-started .copyright {
+        font-size: .9rem;
+    }
+
+    #get-started .copyright .privacy {
+        font-size: .9rem;
+    }
+
+
+
+    /*
+    7 - FOOTER
+    */
+
+    footer {
+        font-size: 0.9rem;
+        font-weight: 300;
+    }
+
+    footer .container {
+        max-width: calc(var(--desktop-max-width) - 1rem);
+        margin-inline: auto;
+    }
+}
