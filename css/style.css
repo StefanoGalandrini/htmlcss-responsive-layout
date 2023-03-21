@@ -13,8 +13,8 @@ html {
     --main-color-blue: #0084FD;
     --color-blue-hover: #0f5597;
     --desktop-max-width: 1140px;
-    --tablet-max-width: 810px;
-    --mobile-max-width: 375px;
+    --tablet-max-width: 768px;
+    --mobile-max-width: 480px;
     --card-gap: 1.5rem;
     --card-bkg-color: #b5ddff;
     --color-purple: #9792E4;
@@ -41,7 +41,7 @@ a {
 
 header {
     height: var(--header-height);
-    width: 100vw;
+    width: 100%;
     background-color: var(--main-color-blue);
 }
 
@@ -49,6 +49,7 @@ nav {
     height: 100%;
     max-width: var(--desktop-max-width);
     margin-inline: auto;
+    padding-inline: 0.5rem;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -59,7 +60,6 @@ nav {
 .logo {
     display: block;
     width: 80px;
-    vertical-align: middle;
 }
 
 nav .menu-container {
@@ -71,7 +71,6 @@ nav .menu-container {
 
 nav .menu {
     display: flex;
-    justify-content: center;
     align-items: center;
     z-index: 1;
     transition: 500ms;
@@ -141,12 +140,12 @@ nav .menu-container .hamburger::after {
 }
 
 nav .menu-container .hamburger::before {
-    top: -.7rem;
+    top: -0.7rem;
     width: 1.8rem;
 }
 
 nav .menu-container .hamburger::after {
-    top: .7rem;
+    top: 0.7rem;
     width: 1.8rem;
 }
 
@@ -285,8 +284,9 @@ padding: 10rem 0 5rem;
 }
 
 #planning .cards {
-    max-width: 875px;
+    max-width: var(--desktop-max-width);
     margin-inline: auto;
+    padding-inline: 8.5rem;
     display: flex;
     gap: calc(5 * var(--card-gap));
 }
@@ -508,17 +508,18 @@ SECTION 5 - ABOUT US
 
 #about-us .container {
     max-width: var(--desktop-max-width);
+    padding-inline: 1rem;
     display: flex;
     gap: calc(4 * var(--card-gap));
     margin-inline: auto;
 }
 
 #about-us .about-text {
-    flex: 0 0 calc(70% - 2 * var(--card-gap))
+    flex: 0 0 calc(70% - 4 * var(--card-gap))
 }
 
 #about-us .about-card {
-    flex: 0 0 calc(30% - 2 * var(--card-gap))
+    flex: 0 0 calc(30% - 4 * var(--card-gap))
 }
 
 #about-us .about-text h2 {
@@ -536,18 +537,23 @@ SECTION 5 - ABOUT US
 
 #about-us .about-card {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
 }
 
 #about-us .about-card .img-container {
     width: 15rem;
     height: 15rem;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    background-image: url(../img/about.jpg);
-    background-size: cover;
     margin-bottom: 2rem;
     position: relative;
+}
+
+#about-us .about-card img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 #about-us .quote {
@@ -641,7 +647,6 @@ SECTION 6 - GET STARTED
 
 
 
-
 /*
 7 - FOOTER
 */
@@ -671,11 +676,7 @@ footer a {
 MEDIA QUERY FOR TABLET WIDTH
 */
 
-@media screen and (max-width: 810px) {
-    html {
-    --desktop-max-width: var(--tablet-max-width);
-    }
-
+@media screen and (max-width: 768px) {
 
     /* HEADER AND NAVBAR */
     nav .menu-container .hamburger,
@@ -684,7 +685,7 @@ MEDIA QUERY FOR TABLET WIDTH
     }
 
     nav {
-        padding-inline: 0.5rem;
+        padding-inline: 1rem;
     }
 
     nav .menu {
@@ -692,7 +693,7 @@ MEDIA QUERY FOR TABLET WIDTH
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        position: fixed;
+        position: absolute;
         top: var(--header-height);
         right: -15rem;
         background-color: var(--main-color-blue);
@@ -702,7 +703,7 @@ MEDIA QUERY FOR TABLET WIDTH
 
     nav .menu .menu-item {
         width: 100%;
-        padding: 0;
+        padding: 0 1rem;
         text-align: center;
     }
 
@@ -710,10 +711,15 @@ MEDIA QUERY FOR TABLET WIDTH
         padding: 1rem 0;
     }
 
+    nav .menu .menu-button {
+        margin: 2.5rem 2rem 0;
+    }
+
     /* SECTION 1 - BLUE CARDS */
 
     .blue-cards .container {
-        max-width: calc(var(--desktop-max-width) - 5rem);
+        max-width: var(--tablet-max-width);
+        padding-inline: 1rem;
     }
 
     .blue-cards .container .large .content {
@@ -729,14 +735,13 @@ MEDIA QUERY FOR TABLET WIDTH
         display: block;
         min-width: 0;
         max-width: 65%;
-        margin-top: 2rem;
-        margin-left: 1.5rem;
+        margin: 2rem auto 0;
     }    
 
         /* SECTION 2 - PLANNING */
 
     #planning .cards {
-        max-width: calc(var(--tablet-max-width) - 10rem);
+        max-width: var(--tablet-max-width);
         margin-inline: auto;
         display: block;
     }
@@ -768,9 +773,9 @@ MEDIA QUERY FOR TABLET WIDTH
         /* SECTION 3 - TESTIMONIALS */
 
     #testimonials {
-    max-width: calc(var(--desktop-max-width) - 6rem);
+    max-width: var(--tablet-max-width);
     margin-inline: auto;
-    padding: 4rem 0;
+    padding: 4rem 1rem;
     }
 
 
@@ -778,9 +783,16 @@ MEDIA QUERY FOR TABLET WIDTH
     SECTION 4 - BENEFITS
     */
 
+    #benefits h2 {
+        font-size: 2.5rem;
+        margin-inline: 2rem;
+    }
+
     #benefits .container {
-        max-width: calc(var(--desktop-max-width) - 6rem);
+        max-width: var(--tablet-max-width);
         margin-inline: auto;
+        padding-inline: 1rem;
+        align-content: center;
     }
 
     #benefits .card {
@@ -793,17 +805,18 @@ MEDIA QUERY FOR TABLET WIDTH
     */
 
     #about-us .container {
-        max-width: calc(var(--desktop-max-width) - 12rem);
-        gap: calc(2 * var(--card-gap));
+        max-width: var(--tablet-max-width);
         margin-inline: auto;
+        padding-inline: 2rem;
+        gap: calc(2 * var(--card-gap));
     }
 
     #about-us .about-text {
-        flex: 0 0 calc(60% - 2 * var(--card-gap))
+        max-width: 60%;
     }
 
     #about-us .about-card {
-        flex: 0 0 calc(40% - 2 * var(--card-gap))
+        max-width: 40%;
     }
 
     #about-us .about-text h2 {
@@ -816,13 +829,19 @@ MEDIA QUERY FOR TABLET WIDTH
         line-height: 2rem;
     }
     #about-us .about-card h3 {
-        font-size: 1.75rem;
+        font-size: 1.7rem;
         line-height: 2.5rem;
+        margin-right: 1rem;
         color: var(--color-purple);
         margin-bottom: 2rem;
     }
-}
 
+    #about-us .about-card .quote {
+        font-size: 10rem;
+        top: -5px;
+        right: -5px;
+    }
+}
 
 
 
@@ -830,15 +849,12 @@ MEDIA QUERY FOR TABLET WIDTH
 MEDIA QUERY FOR MOBILE WIDTH
 */
 
-@media screen and (max-width: 375px) {
-    html {
-    --desktop-max-width: calc(var(--mobile-max-width) - 3rem);
-    }
+@media screen and (max-width: 480px) {
 
     /* SECTION 1 - BLUE CARDS */
 
     .blue-cards .container {
-        max-width: var(--desktop-max-width);
+        max-width: var(--mobile-max-width);
     }
 
     .blue-cards .container .normal,
@@ -868,10 +884,16 @@ MEDIA QUERY FOR MOBILE WIDTH
     SECTION 2 - PLANNING
     */
 
-    #planning .cards {
-        max-width: calc(var(--mobile-max-width) - 4rem);
+    #planning .container {
+        max-width: var(--mobile-max-width);
         margin-inline: auto;
+        padding: 3rem 1rem;
+    }
+
+    #planning .cards {
         display: block;
+        margin: 0;
+        padding: 1.5rem;
     }
 
     #planning .card img {
@@ -880,17 +902,20 @@ MEDIA QUERY FOR MOBILE WIDTH
 
     #planning .card.purple h2 {
         color: white;
-        font-size: 3rem;
-        margin-top: 3rem;
-        margin-bottom: 3rem;
+        font-size: 2.5rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    #planning .card p {
+        line-height: 1.7;
     }
 
     #planning .card.white {
         background-color: white;
         border-radius: 50px;
-        margin-top: 5rem;
+        margin-top: 3rem;
         text-align: center;
-        padding: 2rem;
     }
 
     #planning .card.white img {
@@ -904,8 +929,9 @@ MEDIA QUERY FOR MOBILE WIDTH
     */
 
     #testimonials {
-        max-width: var(--desktop-max-width);
+        max-width: var(--mobile-max-width);
         margin-inline: auto;
+        padding-inline: 1rem;
     }
 
     #testimonials .card {
@@ -932,14 +958,15 @@ MEDIA QUERY FOR MOBILE WIDTH
     */
 
     #benefits h2 {
-        max-width: var(--desktop-max-width);
+        max-width: var(--mobile-max-width);
         margin-inline: auto;
+        padding-inline: 2rem;
         font-size: 2.2rem;
     }
 
     #benefits .container {
-        max-width: var(--desktop-max-width);
-        margin-inline: auto;
+        max-width: var(--mobile-max-width);
+        padding-inline: 1rem;
         display: block;
     }
 
@@ -954,8 +981,9 @@ MEDIA QUERY FOR MOBILE WIDTH
     */
 
     #about-us .container {
-        max-width: calc(var(--desktop-max-width) - 3rem);
+        max-width: var(--mobile-max-width);
         margin-inline: auto;
+        padding-inline: 1rem;
         display: block;
     }
 
@@ -974,8 +1002,10 @@ MEDIA QUERY FOR MOBILE WIDTH
         height: 10rem;
     }
 
-    #about-us .quote {
-        font-size: 12rem;
+    #about-us .about-card .quote {
+        font-size: 9rem;
+        top: -10px;
+        right: -15px;
     }
 
     #about-us .about-card h3 {
@@ -993,8 +1023,9 @@ MEDIA QUERY FOR MOBILE WIDTH
     */
 
     #get-started .container {
-        max-width: calc(var(--desktop-max-width) - 1rem);
+        max-width: var(--mobile-max-width);
         margin-inline: auto;
+        padding-inline: 1rem;
     }
 
     #get-started .title {
@@ -1029,7 +1060,8 @@ MEDIA QUERY FOR MOBILE WIDTH
     }
 
     footer .container {
-        max-width: calc(var(--desktop-max-width) - 1rem);
+        max-width: var(--mobile-max-width);
         margin-inline: auto;
+        padding-inline: 1rem;
     }
 }
