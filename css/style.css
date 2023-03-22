@@ -288,11 +288,11 @@ padding: 10rem 0 5rem;
     margin-inline: auto;
     padding-inline: 8.5rem;
     display: flex;
-    gap: calc(5 * var(--card-gap));
+    gap: calc(3 * var(--card-gap));
 }
 
 #planning .card {
-    flex: 0 0 50%;
+    flex: 0 0 calc(50% - 1.5 * var(--card-gap));
 }
 
 #planning .card img {
@@ -315,7 +315,7 @@ padding: 10rem 0 5rem;
 #planning .card.white {
     background-color: white;
     border-radius: 50px;
-    margin-top: 14rem;
+    margin-top: 10rem;
     text-align: center;
     padding-inline: 3rem;
 }
@@ -510,16 +510,16 @@ SECTION 5 - ABOUT US
     max-width: var(--desktop-max-width);
     padding-inline: 1rem;
     display: flex;
-    gap: calc(4 * var(--card-gap));
+    gap: calc(2 * var(--card-gap));
     margin-inline: auto;
 }
 
 #about-us .about-text {
-    flex: 0 0 calc(70% - 4 * var(--card-gap))
+    max-width: calc(60% - var(--card-gap))
 }
 
 #about-us .about-card {
-    flex: 0 0 calc(30% - 4 * var(--card-gap))
+    max-width: calc(40% - var(--card-gap))
 }
 
 #about-us .about-text h2 {
@@ -542,15 +542,16 @@ SECTION 5 - ABOUT US
 }
 
 #about-us .about-card .img-container {
-    width: 15rem;
-    height: 15rem;
+    max-width: 15rem;
+    max-height: 15rem;
+    aspect-ratio: 1 / 1;
     margin-bottom: 2rem;
     position: relative;
 }
 
 #about-us .about-card img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     object-fit: cover;
@@ -558,7 +559,7 @@ SECTION 5 - ABOUT US
 
 #about-us .quote {
     position: absolute;
-    top: -40px;
+    top: 0px;
     right: -30px;
     font-size: 15rem;
     font-family: Georgia, serif;
@@ -575,7 +576,7 @@ SECTION 5 - ABOUT US
 #about-us .about-card button {
     width: min-content;
     white-space: nowrap;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: white;
     background-color: var(--color-purple);
     padding: .75em 1.5em;
